@@ -64,8 +64,11 @@ RUN wget https://downloads.rclone.org/rclone-current-linux-amd64.deb && \
 ENV RCLONE_CONFIG=/srv/.rclone/rclone.conf
 
 # Install DEEPaaS from PyPi
-RUN pip install deepaas
 
+RUN pip install --upgrade git+https://github.com/indigo-dc/deepaas.git@master
+
+# RUN pip install deepaas
+RUN pip install --upgrade deepaas
 # Initialization scripts
 RUN git clone https://github.com/deephdc/deep-start /srv/.deep-start && \
     ln -s /srv/.deep-start/deep-start.sh /usr/local/bin/deep-start && \
@@ -80,7 +83,7 @@ RUN if [ "$jlab" = true ]; then \
     else echo "[INFO] Skip JupyterLab installation!"; fi
 
 # Install user app
-RUN git clone -b $branch https://github.com/adnaneds/unet && \
+RUN git clone https://github.com/adnaneds/unet && \
     cd  unet && \
     pip install -e . && \
     cd ..
