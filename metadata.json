@@ -1,0 +1,35 @@
+{
+    "title": "unet",
+    "summary": "Semantic segmentation",
+    "description": [
+		"This is unet application using DEEPaaS API",
+	],
+    "keywords": [
+        "docker",
+        "api-v2"
+    ],
+    "license": "MIT",
+    "date_creation": "2022-07-03",
+    "sources": {
+		"dockerfile_repo": "https://github.com/adnaneds/DEEP-OC-unet",
+		"docker_registry_repo": "adnaneds/deep-oc-unet",
+		"code": "https://github.com/adnaneds/unet"
+	},
+    "continuous_integration": {
+        "build_status_badge": "https://jenkins.indigo-datacloud.eu/buildStatus/icon?job=Pipeline-as-code/DEEP-OC-org/DEEP-OC-unet/master",
+        "build_status_url": "https://jenkins.indigo-datacloud.eu/job/Pipeline-as-code/job/DEEP-OC-org/job/DEEP-OC-unet/job/master"
+    },
+    "tosca": [
+        {
+            "title": "Mesos (CPU)",
+            "url": "https://raw.githubusercontent.com/indigo-dc/tosca-templates/master/deep-oc/deep-oc-marathon-webdav.yml",
+            "inputs": [
+                "rclone_conf",
+                "rclone_url",
+                "rclone_vendor",
+                "rclone_user",
+                "rclone_pass"
+            ]
+        }
+    ]
+}
