@@ -2,7 +2,7 @@
     "title": "unet",
     "summary": "Semantic segmentation",
     "description": [
-		"This is unet application using DEEPaaS API",
+		"This is unet application using DEEPaaS API"
 	],
     "keywords": [
         "docker",
