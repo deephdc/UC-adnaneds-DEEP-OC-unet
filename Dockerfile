@@ -83,7 +83,7 @@ RUN if [ "$jlab" = true ]; then \
     else echo "[INFO] Skip JupyterLab installation!"; fi
 
 # Install user app
-RUN git clone https://github.com/adnaneds/unet && \
+RUN git clone -b main --single-branch https://github.com/adnaneds/unet && \
     cd  unet && \
     pip install -e . && \
     cd ..
