@@ -85,7 +85,8 @@ RUN if [ "$jlab" = true ]; then \
 # Install user app
 RUN git clone -b main --single-branch https://github.com/adnaneds/unet && \
     cd  unet && \
-    pip install -e .
+    pip install -e . && \
+    cd ..
 
 # Cleaning up
 RUN apt-get clean && \
