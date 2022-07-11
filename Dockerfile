@@ -85,8 +85,7 @@ RUN if [ "$jlab" = true ]; then \
 # Install user app
 RUN git clone -b main --single-branch https://github.com/adnaneds/unet && \
     cd  unet && \
-    pip install -e . && \
-    cd ..
+    pip install -e .
 
 # Cleaning up
 RUN apt-get clean && \
@@ -94,11 +93,12 @@ RUN apt-get clean && \
     rm -rf /root/.cache/pip/* && \
     rm -rf /tmp/*
 
-RUN cd unet
+# RUN cd unet
 # Open ports: DEEPaaS (5000), Monitoring (6006), Jupyter (8888)
 EXPOSE 5000 6006 8888
 
 
 
 # Launch deepaas
+
 CMD ["deepaas-run", "--listen-ip", "0.0.0.0", "--listen-port", "5000"]
