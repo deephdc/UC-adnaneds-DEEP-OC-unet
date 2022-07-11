@@ -94,7 +94,7 @@ RUN apt-get clean && \
     rm -rf /root/.cache/pip/* && \
     rm -rf /tmp/*
 
-
+RUN cd unet
 # Open ports: DEEPaaS (5000), Monitoring (6006), Jupyter (8888)
 EXPOSE 5000 6006 8888
 
