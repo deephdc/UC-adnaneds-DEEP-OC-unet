@@ -28,7 +28,7 @@ If you want to build the container directly in your machine (because you want to
 ```bash
 git clone https://github.com/adnaneds/DEEP-OC-unet
 cd DEEP-OC-unet
-docker build -t adnaneds/deep-oc-unet .
+docker build -t adnaneds/deep-oc-unet . --no-cache
 docker run -ti -p 5000:5000 -p 6006:6006 -p 8888:8888 adnaneds/deep-oc-unet
 ```
 
