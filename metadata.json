@@ -12,7 +12,7 @@
     "date_creation": "2022-07-03",
     "sources": {
 		"dockerfile_repo": "https://github.com/adnaneds/DEEP-OC-unet",
-		"docker_registry_repo": "adnaneds/deep-oc-unet",
+		"docker_registry_repo": "deephdc/deep-oc-unet",
 		"code": "https://github.com/adnaneds/unet"
 	},
     "continuous_integration": {
