@@ -8,7 +8,7 @@ pipeline {
     }
 
     environment {
-        dockerhub_repo = "adnaneds/deep-oc-unet"
+        dockerhub_repo = "deephdc/uc-adnaneds-deep-oc-unet"
         base_cpu_tag = "2.9.1"
         base_gpu_tag = "2.9.1-gpu"
     }
