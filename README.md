@@ -3,7 +3,7 @@
 </div>
 
 # DEEP-OC-unet
-[![Build Status](https://jenkins.indigo-datacloud.eu/buildStatus/icon?job=Pipeline-as-code/DEEP-OC-org/DEEP-OC-unet/test)](https://jenkins.indigo-datacloud.eu/job/Pipeline-as-code/job/DEEP-OC-org/job/DEEP-OC-unet/job/test)
+[![Build Status](https://jenkins.indigo-datacloud.eu/buildStatus/icon?job=Pipeline-as-code/DEEP-OC-org/UC-adnaneds-DEEP-OC-unet/test)](https://jenkins.indigo-datacloud.eu/job/Pipeline-as-code/job/DEEP-OC-org/job/UC-adnaneds-DEEP-OC-unet/job/test)
 
 This is a container that will run the [unet](https://github.com/adnaneds/unet) application leveraging the DEEP as a Service API component ([DEEPaaS API V2](https://github.com/indigo-dc/DEEPaaS)).
 
@@ -15,7 +15,7 @@ This is a container that will run the [unet](https://github.com/adnaneds/unet) a
 To run the Docker container directly from Docker Hub and start using the API simply run the following command:
 
 ```bash
-$ docker run -ti -p 5000:5000 -p 6006:6006 -p 8888:8888 adnaneds/deep-oc-unet
+$ docker run -ti -p 5000:5000 -p 6006:6006 -p 8888:8888 deephdc/uc-adnaneds-deep-oc-unet
 ```
 
 This command will pull the Docker container from the Docker Hub [adnaneds](https://hub.docker.com/u/adnaneds/) repository and start the default command (`deepaas-run --listen-ip=0.0.0.0`).
@@ -28,8 +28,8 @@ If you want to build the container directly in your machine (because you want to
 ```bash
 git clone https://github.com/adnaneds/DEEP-OC-unet
 cd DEEP-OC-unet
-docker build -t adnaneds/deep-oc-unet .
-docker run -ti -p 5000:5000 -p 6006:6006 -p 8888:8888 adnaneds/deep-oc-unet
+docker build -t deephdc/uc-adnaneds-deep-oc-unet .
+docker run -ti -p 5000:5000 -p 6006:6006 -p 8888:8888 deephdc/uc-adnaneds-deep-oc-unet
 ```
 
 These three steps will download the repository from GitHub and will build the Docker container locally on your machine. You can inspect and modify the `Dockerfile` in order to check what is going on. For instance, you can pass the `--debug=True` flag to the `deepaas-run` command, in order to enable the debug mode.
