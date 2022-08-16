@@ -23,7 +23,7 @@ pipeline {
         stage('Docker image building') {
             when {
                 anyOf {
-                    branch 'master'
+                    branch 'main'
                     branch 'test'
                     buildingTag()
                 }
@@ -36,18 +36,18 @@ pipeline {
                         // build different tags
                         id = "${env.dockerhub_repo}"
 
-                        if (env.BRANCH_NAME == 'master') {
+                        if (env.BRANCH_NAME == 'main') {
                            // CPU (aka latest, i.e. default)
                            id_cpu = DockerBuild(id,
                                             tag: ['latest', 'cpu'],
                                             build_args: ["tag=${env.base_cpu_tag}",
-                                                         "branch=master"])
+                                                         "branch=main"])
 
                            // GPU
                            id_gpu = DockerBuild(id,
                                             tag: ['gpu'],
                                             build_args: ["tag=${env.base_gpu_tag}",
-                                                         "branch=master"])
+                                                         "branch=main"])
                         }
 
                         if (env.BRANCH_NAME == 'test') {
@@ -76,7 +76,7 @@ pipeline {
         stage('Docker Hub delivery') {
             when {
                 anyOf {
-                   branch 'master'
+                   branch 'main'
                    branch 'test'
                    buildingTag()
                }
@@ -100,7 +100,7 @@ pipeline {
         stage("Render metadata on the marketplace") {
             when {
                 allOf {
-                    branch 'master'
+                    branch 'main'
                     changeset 'metadata.json'
                 }
             }
