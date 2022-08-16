@@ -2,7 +2,7 @@
     "title": "2D semantic segmentation multilabels with Unet",
     "summary": "Semantic segmentation with Unet Deep Learning model applied to segment Cercospora Leaf Spot.",
     "description": [
-		"This is 2D semantic segmentation multilabels with application using DEEPaaS API. The dataset used to train this model contains three classes: Background, Leaf and Disease (Cercospora)."
+		"This is 2D semantic segmentation multilabels with application using DEEPaaS API. The dataset used to train this model contains three classes: Background, Leaf and Disease (Cercospora). "
 	],
     "keywords": [
         "docker",
