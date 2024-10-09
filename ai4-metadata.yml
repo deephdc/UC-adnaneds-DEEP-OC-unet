@@ -1,0 +1,25 @@
+metadata_version: 2.0.0
+title: 2D semantic segmentation multilabels with Unet
+summary: Semantic segmentation with Unet Deep Learning model applied to segment Cercospora Leaf Spot.
+description: |-
+  This is 2D semantic segmentation multilabels with application using DEEPaaS API.
+
+  The dataset used to train this model contains three classes: Background, Leaf and Disease (Cercospora).
+
+dates:
+  created: '2022-07-03'
+  updated: '2024-10-09'
+links:
+  source_code: https://github.com/adnaneds/unet
+  docker_image: deephdc/uc-adnaneds-deep-oc-unet
+tags:
+  - deep learning
+tasks:
+  - Computer Vision
+categories:
+  - AI4 pre trained
+  - AI4 trainable
+libraries:
+  - TensorFlow
+data-type:
+  - Image
