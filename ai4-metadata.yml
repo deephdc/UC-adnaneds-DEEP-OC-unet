@@ -10,7 +10,7 @@ dates:
   created: '2022-07-03'
   updated: '2024-10-09'
 links:
-  source_code: https://github.com/adnaneds/unet
+  source_code: https://github.com/deephdc/UC-adnaneds-DEEP-OC-unet
   docker_image: deephdc/uc-adnaneds-deep-oc-unet
 tags:
   - deep learning
